@@ -1,19 +1,17 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { environment } from 'src/environments/environment';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class ArticleService {
-  // private apiServerUrl = environment.apiBackEndUrl;
+    constructor(private http: HttpClient) {}
 
-  // constructor(private http: HttpClient) {}
-
-  //   public getArticles(): Observable<any> {
-  //     return this.http.get<any>(`${this.apiServerUrl}/api/articles`);
-  //   }
+    public getArticles(): Observable<any> {
+      return this.http.get<any>(`https://newsapi.org/v2/top-headlines?country=us&apiKey=1a8aac7473ea4b0196a149454361d807`);
+    }
 
    
 }
