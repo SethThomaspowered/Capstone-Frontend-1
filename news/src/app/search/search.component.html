@@ -5,7 +5,7 @@
 </section>
 
 
-    <h3>Headline News for {{category}}</h3>
+    <!-- <h3>Headline News for {{category}}</h3> -->
     <div class="article-container" *ngFor="let article of news.articles">
         <div class = "title-image-container">
             <div class="article-title">{{article.title}}</div>
@@ -14,5 +14,8 @@
         <div class="description-container">
             <p>{{article.description}}</p>
         </div>
+        <div class="content-container">
+            <p>{{article.content}}</p>
+        </div>
 
-        <!-- <div>{{news.articles[2].content}}</div> -->
+        

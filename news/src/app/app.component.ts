@@ -21,7 +21,7 @@ export class AppComponent implements OnInit{
   
 
   ngOnInit(): void {
-      this.getArticles();
+      // this.getArticles();
       this.isLoggedIn = !!this.tokenStorageService.getToken();
 
       if (this.isLoggedIn) {
@@ -36,17 +36,17 @@ export class AppComponent implements OnInit{
     window.location.reload();
   }
 
-  public getArticles(): void {
-    this.articleService.getArticles().subscribe(
-      (response: Article[]) => {
-        this.articles = response;
-      },
-      (error: HttpErrorResponse) => {
-        alert(error.message);
-        console.log(error.message);
+  // public getArticles(): void {
+  //   this.articleService.getArticles().subscribe(
+  //     (response: Article[]) => {
+  //       this.articles = response;
+  //     },
+  //     (error: HttpErrorResponse) => {
+  //       alert(error.message);
+  //       console.log(error.message);
         
-      }
-    );
-  }
+  //     }
+  //   );
+  // }
 
 }

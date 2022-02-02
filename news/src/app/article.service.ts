@@ -7,13 +7,13 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root'
 })
 export class ArticleService {
-  private apiServerUrl = environment.apiBackEndUrl;
+  // private apiServerUrl = environment.apiBackEndUrl;
 
-  constructor(private http: HttpClient) {}
+  // constructor(private http: HttpClient) {}
 
-    public getArticles(): Observable<any> {
-      return this.http.get<any>(`${this.apiServerUrl}/api/articles`);
-    }
+  //   public getArticles(): Observable<any> {
+  //     return this.http.get<any>(`${this.apiServerUrl}/api/articles`);
+  //   }
 
    
 }
