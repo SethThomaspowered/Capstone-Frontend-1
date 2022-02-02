@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Article } from '../article';
 import { ArticleService } from '../article.service';
 import { UserService } from '../services/user.service';
+import { NewsService } from '../services/news.service';
 
 @Component({
   selector: 'app-home',
@@ -12,8 +13,15 @@ export class HomeComponent implements OnInit {
   content?: string;
   articles: Article[] | undefined;
   news: any;
+  genNews: any;
 
-  constructor(private userService: UserService, private articleService: ArticleService) { }
+  constructor(private userService: UserService, private newsService: NewsService) {
+    this.newsService.getUSANews().subscribe(n => {
+      this.news = n;
+      console.log(this.news);
+      
+    })
+   }
 
   ngOnInit(): void {
     this.userService.getPublicContent().subscribe(
@@ -24,19 +32,7 @@ export class HomeComponent implements OnInit {
         this.content = JSON.parse(err.error).message;
       }
     );
-
-    this.articleService.getArticles().subscribe(
-      (response: Article[]) => {
-        this.articles = response;
-      }
-    );
+    
   }
-  public getArticles(): void {
-    this.articleService.getArticles().subscribe(
-      (response: Article[]) => {
-        this.articles = response;
-      }
-    );
-  }
-
+  
 }
