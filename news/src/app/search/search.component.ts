@@ -19,8 +19,7 @@ export class SearchComponent implements OnInit {
     .subscribe((response) => {
       console.log(response);
       this.news = response;
-    });
-    
+    });    
     
   }
 
