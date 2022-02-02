@@ -1,55 +1,58 @@
-
 <div *ngFor="let article of articles">
-    <div>{{article.title}}</div>
+  <div>{{article.title}}</div>
 </div>
 
 <div id="app">
-    <nav class="navbar navbar-expand navbar-dark bg-dark">
-      <a href="#" class="navbar-brand">News to me!</a>
-      <ul class="navbar-nav mr-auto" routerLinkActive="active">
-        <li class="nav-item">
-          <a href="/home" class="nav-link" routerLink="home">Home </a>
-        </li>
-        
-        <li class="nav-item">
-          <a href="/user" class="nav-link" *ngIf="isLoggedIn" routerLink="user">User</a>
-        </li>
-      </ul>
-  
-      <ul class="navbar-nav ml-auto" *ngIf="!isLoggedIn">
-        <li class="nav-item">
-          <a href="/register" class="nav-link" routerLink="register">Sign Up</a>
-        </li>
-        <li class="nav-item">
-          <a href="/login" class="nav-link" routerLink="login">Login</a>
-        </li>
-      </ul>
-  
-      <ul class="navbar-nav ml-auto" *ngIf="isLoggedIn">
-        <li class="nav-item">
-          <a href="/profile" class="nav-link" routerLink="profile">{{ username }}</a>
-        </li>
-        <li class="nav-item">
-          <a href class="nav-link" (click)="logout()">LogOut</a>
-        </li>
-      </ul>
-    </nav>
-      
-    <div class="offcanvas offcanvas-start shadow" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-      <div class="offcanvas-body">
-            <ul class="navbar-nav">
-                <li><a href="#"><i class="hn hn-business"></i> <span class="item-text">Business</span></a></li>
-                <li><a href="#"><i class="bi bi-pencil-square"></i> <span class="item-text">Applications</span></a></li>
-                <li><a href="#"><i class="bi bi-people"></i> <span class="item-text">Audience</span></a></li>
-                <li><a href="#"><i class="bi bi-book"></i> <span class="item-text">Books World</span></a></li>
-                <li><a href="#"><i class="bi bi-person-check"></i> <span class="item-text">Candidates</span></a></li>
-                <li><a href="#"><i class="bi bi-envelope"></i> <span class="item-text">Email</span></a></li>
-                <li><a href="#"><i class="bi bi-graph-up"></i> <span class="item-text">Analytics</span></a></li>
-            </ul>
-      </div>
-    </div>
+  <nav class="navbar navbar-expand navbar-dark bg-dark">
+    <a href="#" class="navbar-brand">News to me!</a>
+    <ul class="navbar-nav mr-auto" routerLinkActive="active">
+      <li class="nav-item">
+        <a href="/home" class="nav-link" routerLink="home">Home </a>
+      </li>
 
-    <div class="container">
-      <router-outlet></router-outlet>
-    </div>
+      <li class="nav-item">
+        <a href="/user" class="nav-link" *ngIf="isLoggedIn" routerLink="user">User</a>
+      </li>
+    </ul>
+
+    <ul class="navbar-nav ml-auto" *ngIf="!isLoggedIn">
+      <li class="nav-item">
+        <a href="/register" class="nav-link" routerLink="register">Sign Up</a>
+      </li>
+      <li class="nav-item">
+        <a href="/login" class="nav-link" routerLink="login">Login</a>
+      </li>
+    </ul>
+
+    <ul class="navbar-nav ml-auto" *ngIf="isLoggedIn">
+      <li class="nav-item">
+        <a href="/profile" class="nav-link" routerLink="profile">{{ username }}</a>
+      </li>
+      <li class="nav-item">
+        <a href class="nav-link" (click)="logout()">LogOut</a>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="sidebar-nav">    
+      <div class="offcanvas offcanvas-start shadow" tahlndex="-1" id="offcanvasNavbar"
+        aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-body">
+          <ul class="navbar-nav">
+            <li><a href="#"><i class="bi bi-globe2"></i> <span class="item-text">General</span></a></li>
+            <li><a href="#"><i class="bi bi-briefcase-fill"></i> <span class="item-text">Business</span></a></li>
+            <li><a href="#"><i class="bi bi-cpu-fill"></i> <span class="item-text">Technology</span></a></li>
+            <li><a href="#"><i class="bi bi-bicycle"></i> <span class="item-text">Sports</span></a></li>
+            <li><a href="#"><i class="bi bi-radioactive"></i> <span class="item-text">Science</span></a></li>
+            <li><a href="#"><i class="bi bi-heart-pulse-fill"></i> <span class="item-text">Health</span></a></li>
+            <li><a href="#"><i class="bi bi-camera-reels-fill"></i> <span class="item-text">Entertainment</span></a>
+            </li>
+          </ul>
+        </div>
+      </div>    
   </div>
+
+  <div class="container">
+    <router-outlet></router-outlet>
+  </div>
+</div>
