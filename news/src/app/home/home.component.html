@@ -1,41 +1,44 @@
 <body class="home-container">
-<app-search></app-search>
-
-<div class="sidebar-nav">
-  <div class="offcanvas offcanvas-start" tahlndex="-1" id="offcanvasNavbar"
-    aria-labelledby="offcanvasNavbarLabel">
-    <div class="offcanvas-body">
-      <ul class="navbar-nav">
-        <li><a href="#"><i class="bi bi-globe2"></i> <span class="item-text">General</span></a></li>
-        <li><a href="#"><i class="bi bi-briefcase-fill"></i> <span class="item-text">Business</span></a></li>
-        <li><a href="#"><i class="bi bi-cpu-fill"></i> <span class="item-text">Technology</span></a></li>
-        <li><a href="#"><i class="bi bi-bicycle"></i> <span class="item-text">Sports</span></a></li>
-        <li><a href="#"><i class="bi bi-radioactive"></i> <span class="item-text">Science</span></a></li>
-        <li><a href="#"><i class="bi bi-heart-pulse-fill"></i> <span class="item-text">Health</span></a></li>
-        <li><a href="#"><i class="bi bi-camera-reels-fill"></i> <span class="item-text">Entertainment</span></a>
-        </li>
-      </ul>
-    </div>
+  <div class="search-app">
+    <app-search></app-search>
   </div>
-</div>
+  <!-- <div class="sidebar-nav">
+    <div class="offcanvas offcanvas-start" tahlndex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <div class="offcanvas-body">
+        <ul class="navbar-nav">
+          <li><a href="#"><i class="bi bi-globe2"></i> <span class="item-text">General</span></a></li>
+          <li>
+            <a href="#"><i class="bi bi-briefcase-fill"></i> <span class="item-text">Business</span>
+            </a>
+          </li>
+          <li><a href="#"><i class="bi bi-cpu-fill"></i> <span class="item-text">Technology</span></a></li>
+          <li><a href="#"><i class="bi bi-bicycle"></i> <span class="item-text">Sports</span></a></li>
+          <li><a href="#"><i class="bi bi-radioactive"></i> <span class="item-text">Science</span></a></li>
+          <li><a href="#"><i class="bi bi-heart-pulse-fill"></i> <span class="item-text">Health</span></a></li>
+          <li><a href="#"><i class="bi bi-camera-reels-fill"></i> <span class="item-text">Entertainment</span></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div> -->
 
- 
-<div class="newsfeed">
-  <h2>Latest News</h2> 
-  <div class="article-container" *ngFor="let article of news.articles">
-    
-    <div class="article-content-container">
-        
+
+  <div class="newsfeed">
+    <h2>Latest News</h2>
+    <div class="article-container" *ngFor="let article of news.articles">
+
+      <div class="article-content-container">
+
         <img class="image" src="{{article.urlToImage}}">
-    </div>
-    
-    <div class="description-container">
-      <div class="article-title">{{article.title}}</div>
+      </div>
+
+      <div class="description-container">
+        <div class="article-title">{{article.title}}</div>
         {{article.description}}
+      </div>
+
+      <a href="/user" class="nav-link" *ngIf="isLoggedIn" routerLink="user"><i class="bi bi-box-arrow-down"></i></a>
     </div>
-    <i class="bi bi-box-arrow-down"></i>
-    
-</div>
-  
-</div>
+
+  </div>
 </body>

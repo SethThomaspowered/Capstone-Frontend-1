@@ -1,20 +1,43 @@
-<section>    
+<!-- <section>    
     <input [(ngModel)]="category" type="text" placeholder="Category"/>
     <input (click) = "findNews(category)" type="submit" value="Search"/>
-</section>
+</section> -->
 
+<div class="sidebar-nav">
+    <div class="offcanvas offcanvas-start" tahlndex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-body">
+            <ul class="navbar-nav">
+                <li><button (click)="findGenNews()"><i class="bi bi-globe2"></i> <span
+                            class="item-text">General</span></button></li>
+                <li>
+                    <button (click)="findBusNews()"><i class="bi bi-briefcase-fill"></i> <span
+                            class="item-text">Business</span>
+                    </button>
+                </li>
+                <li><button (click)="findTecNews()"><i class="bi bi-cpu-fill"></i> <span
+                            class="item-text">Technology</span></button></li>
+                <li><button (click)="findSpoNews()"><i class="bi bi-bicycle"></i> <span
+                            class="item-text">Sports</span></button></li>
+                <li><button (click)="findSciNews()"><i class="bi bi-radioactive"></i> <span
+                            class="item-text">Science</span></button></li>
+                <li><button (click)="findHeaNews()"><i class="bi bi-heart-pulse-fill"></i> <span
+                            class="item-text">Health</span></button></li>
+                <li><button (click)="findEntNews()"><i class="bi bi-camera-reels-fill"></i> <span
+                            class="item-text">Entertainment</span></button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
 
-    
-    <div class="article-container" *ngFor="let article of news.articles">
-        <div class = "title-image-container">
-            <div class="article-title">{{article.title}}</div>
-            <img class="image" src="{{article.urlToImage}}">
-        </div>
-        <div class="description-container">
-            <p>{{article.description}}</p>
-        </div>
-        <div class="content-container">
-            <p>{{article.content}}</p>
-        </div>
-
-        
+<div class="article-container" *ngFor="let article of news.articles">
+    <div class="title-image-container">
+        <div class="article-title">{{article.title}}</div>
+        <img class="image" src="{{article.urlToImage}}">
+    </div>
+    <div class="description-container">
+        <p>{{article.description}}</p>
+    </div>
+    <div class="content-container">
+        <p>{{article.content}}</p>
+    </div>

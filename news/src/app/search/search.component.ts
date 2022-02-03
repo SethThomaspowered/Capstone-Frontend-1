@@ -23,6 +23,34 @@ export class SearchComponent implements OnInit {
     
   }
 
+  findGenNews(){        
+    this.findNews("general");    
+  }
+
+  findBusNews(){        
+    this.findNews("business");    
+  }
+
+  findTecNews(){        
+    this.findNews("technology");    
+  }
+
+  findSpoNews(){        
+    this.findNews("sports");    
+  }
+
+  findSciNews(){        
+    this.findNews("science");    
+  }
+
+  findHeaNews(){        
+    this.findNews("health");    
+  }
+
+  findEntNews(){        
+    this.findNews("entertainment");    
+  }
+
   ngOnInit(): void {
   }
 
