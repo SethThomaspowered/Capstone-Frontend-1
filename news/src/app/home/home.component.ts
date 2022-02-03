@@ -20,6 +20,7 @@ export class HomeComponent implements OnInit {
       console.log(this.news);
     })
    }
+   
 
   ngOnInit(): void {
     this.userService.getPublicContent().subscribe(

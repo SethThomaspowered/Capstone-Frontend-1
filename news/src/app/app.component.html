@@ -1,17 +1,14 @@
-<!-- <div *ngFor="let article of articles">
-  <div>{{article.title}}</div>
-</div> -->
 
 <div id="app">
   <nav class="navbar navbar-expand">
     <a href="#" class="navbar-brand">News to me!</a>
     <ul class="navbar-nav mr-auto" routerLinkActive="active">
       <li class="nav-item">
-        <a href="/home" class="nav-link" routerLink="home">Home </a>
+        <a href="/home" class="nav-link" *ngIf="!isLoggedIn" routerLink="home">Home </a>
       </li>
 
       <li class="nav-item">
-        <a href="/user" class="nav-link" *ngIf="isLoggedIn" routerLink="user">User</a>
+        <a href="/user" class="nav-link" *ngIf="isLoggedIn" routerLink="user">My News</a>
       </li>
     </ul>
 
@@ -26,13 +23,10 @@
 
     <ul class="navbar-nav ml-auto" *ngIf="isLoggedIn">
       <li class="nav-item">
-        <a href="/profile" class="nav-link" routerLink="profile">{{ username }}</a>
-      </li>
-      <li class="nav-item">
         <a href class="nav-link" (click)="logout()">LogOut</a>
       </li>
     </ul>
-  </nav> 
+  </nav>
 
   <div class="container">
     <router-outlet></router-outlet>
