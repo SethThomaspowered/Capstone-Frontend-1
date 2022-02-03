@@ -1,5 +1,6 @@
 .sidebar-nav{
     display: inline-block;
+    vertical-align: top;
 }
 .sidebar-nav ul li a {
     font-size: 20px;
@@ -13,7 +14,7 @@
     border-radius: 4px;
 }
 .sidebar-nav .offcanvas {
-    width: 220px;
+    width: 10vw;
     border: none;
 }
 .sidebar-nav .offcanvas ul li a span {
@@ -32,5 +33,20 @@
 }
 .newsfeed{
     display: inline-block;
-    padding: 10px;
+    padding-left: 20px;
+    vertical-align: top;
+    max-width: 60vw;
+}
+
+.image{
+    max-width: 40vw;
+    border-radius: 6px;
+}
+
+.description-container{
+    max-width: 40vw;
+}
+
+.content-container{
+    max-width: 40vw;
 }

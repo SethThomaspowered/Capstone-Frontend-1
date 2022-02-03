@@ -1,9 +1,5 @@
 <app-search></app-search>
-<!-- <div class="container">
-    <header class="jumbotron">
-      <p>{{ content }} Content</p>
-    </header>
-  </div> -->
+
 <div class="sidebar-nav">
   <div class="offcanvas offcanvas-start shadow" tahlndex="-1" id="offcanvasNavbar"
     aria-labelledby="offcanvasNavbarLabel">
@@ -21,18 +17,20 @@
     </div>
   </div>
 </div>
-<div class="newsfeed">Content here
-<div class="article-container" *ngFor="let article of news.articles">
-        <div class = "title-image-container">
-            <div class="article-title">{{article.title}}</div>
-            <img class="image" src="{{article.urlToImage}}">
-        </div>
-        <div class="description-container">
-            <p>{{article.description}}</p>
-        </div>
-        <div class="content-container">
-            <p>{{article.content}}</p>
-        </div>
 
-
+ 
+<div class="newsfeed">
+  <div class="article-container" *ngFor="let article of news.articles">
+    <div class="title-image-container">
+        <div class="article-title">{{article.title}}</div>
+        <img class="image" src="{{article.urlToImage}}">
+    </div>
+    <div class="description-container">
+        <p>{{article.description}}</p>
+    </div>
+    <div class="content-container">
+        <p>{{article.content}}</p>
+    </div>
+</div>
+  
 </div>

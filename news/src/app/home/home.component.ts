@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Article } from '../article';
-import { ArticleService } from '../article.service';
 import { UserService } from '../services/user.service';
 import { NewsService } from '../services/news.service';
 
@@ -13,13 +12,12 @@ export class HomeComponent implements OnInit {
   content?: string;
   articles: Article[] | undefined;
   news: any;
-  genNews: any;
+  
 
   constructor(private userService: UserService, private newsService: NewsService) {
     this.newsService.getUSANews().subscribe(n => {
       this.news = n;
       console.log(this.news);
-      
     })
    }
 
@@ -31,8 +29,7 @@ export class HomeComponent implements OnInit {
       err => {
         this.content = JSON.parse(err.error).message;
       }
-    );
-    
+    );    
   }
   
 }
