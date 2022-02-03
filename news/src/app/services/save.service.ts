@@ -18,7 +18,7 @@ export class SaveService {
 
   constructor(private http: HttpClient) { }
 
-  login(article: { title: any; description: any; url: any; urlToImage: any;}): Observable<any> {
+  addToMyNews(article: { title: any; description: any; url: any; urlToImage: any;}): Observable<any> {
     console.log();
     
     return this.http.post(SAVE_API + 'articles', {
