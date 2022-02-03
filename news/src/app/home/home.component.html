@@ -23,18 +23,18 @@
 <div class="newsfeed">
   <h2>Latest News</h2> 
   <div class="article-container" *ngFor="let article of news.articles">
-    <i class="bi bi-box-arrow-down"></i>
+    
     <div class="article-content-container">
         
         <img class="image" src="{{article.urlToImage}}">
     </div>
+    
     <div class="description-container">
       <div class="article-title">{{article.title}}</div>
         {{article.description}}
     </div>
-    <!-- <div class="content-container">
-        <p>{{article.content}}</p>
-    </div> -->
+    <i class="bi bi-box-arrow-down"></i>
+    
 </div>
   
 </div>
