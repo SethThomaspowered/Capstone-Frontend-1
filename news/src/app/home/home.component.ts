@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Article } from '../article.model';
+import { Article } from '../article/article.model';
 import { UserService } from '../services/user.service';
 import { NewsService } from '../services/news.service';
 import { TokenStorageService } from '../services/token-storage.service';

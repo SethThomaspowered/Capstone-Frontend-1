@@ -13,6 +13,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { authInterceptorProviders } from './helpers/auth.interceptor';
 import { UserComponent } from './user/user.component';
 import { SaveArticlesComponent } from './savearticles/savearticles.component';
+import { ArticleComponent } from './article/article.component';
 
 
 @NgModule({
@@ -24,6 +25,7 @@ import { SaveArticlesComponent } from './savearticles/savearticles.component';
     HomeComponent,
     UserComponent,
     SaveArticlesComponent,
+    ArticleComponent,
     
   ],
   imports: [

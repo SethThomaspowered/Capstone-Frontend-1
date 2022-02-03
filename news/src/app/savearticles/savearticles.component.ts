@@ -3,7 +3,7 @@ import { NewsService } from '../services/news.service';
 import { SaveService } from '../services/save.service';
 import { TokenStorageService } from '../services/token-storage.service';
 import { HttpClient } from '@angular/common/http';
-import { Article } from '../article.model';
+import { Article } from '../article/article.model';
 import { ArticleService } from '../services/article.service';
 
 @Component({
