@@ -13,42 +13,41 @@ export class SearchComponent implements OnInit {
 
   constructor(private http: HttpClient) { }
 
-  findNews(category: string){
+  findNews(category: string) {
     this.http
-    .get(`https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=1a8aac7473ea4b0196a149454361d807`)
-    .subscribe((response) => {
-      console.log(response);
-      this.news = response;
-    });    
-    
+      .get(`https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=1a8aac7473ea4b0196a149454361d807`)
+      .subscribe((response) => {
+        console.log(response);
+        this.news = response;
+      });
   }
 
-  findGenNews(){        
-    this.findNews("general");    
+  findGenNews() {
+    this.findNews("general");
   }
 
-  findBusNews(){        
-    this.findNews("business");    
+  findBusNews() {
+    this.findNews("business");
   }
 
-  findTecNews(){        
-    this.findNews("technology");    
+  findTecNews() {
+    this.findNews("technology");
   }
 
-  findSpoNews(){        
-    this.findNews("sports");    
+  findSpoNews() {
+    this.findNews("sports");
   }
 
-  findSciNews(){        
-    this.findNews("science");    
+  findSciNews() {
+    this.findNews("science");
   }
 
-  findHeaNews(){        
-    this.findNews("health");    
+  findHeaNews() {
+    this.findNews("health");
   }
 
-  findEntNews(){        
-    this.findNews("entertainment");    
+  findEntNews() {
+    this.findNews("entertainment");
   }
 
   ngOnInit(): void {

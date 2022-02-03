@@ -15,7 +15,7 @@ export class HomeComponent implements OnInit {
   articles: Article[] | undefined;
   news: any;
   isLoggedIn = false;
-  category: string = "";
+  // category: string = "";
 
   constructor(private userService: UserService, 
               private newsService: NewsService,
@@ -27,15 +27,15 @@ export class HomeComponent implements OnInit {
     })
    }
    
-   findNews(category: string){
-    this.http
-    .get(`https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=1a8aac7473ea4b0196a149454361d807`)
-    .subscribe((response) => {
-      console.log(response);
-      this.news = response;
-    });    
+  //  findNews(category: string){
+  //   this.http
+  //   .get(`https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=1a8aac7473ea4b0196a149454361d807`)
+  //   .subscribe((response) => {
+  //     console.log(response);
+  //     this.news = response;
+  //   });    
     
-  }
+  // }
 
   ngOnInit(): void {
     this.userService.getPublicContent().subscribe(
