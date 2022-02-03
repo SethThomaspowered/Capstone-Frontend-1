@@ -1,1 +1,31 @@
 <p>save-articles works!</p>
+<body class="user-container">
+    <div class="search-app">
+      <app-search></app-search>
+    </div>
+  <div>Put stuff here</div>
+  <div class="newsfeed">
+    <h2>Latest News</h2>
+    <div class="article-container" *ngFor="let article of news.articles">
+  
+      <div class="article-content-container">
+  
+        <img class="image" src="{{article.urlToImage}}">
+      </div>
+  
+      <div class="description-container">
+        <div class="article-title">{{article.title}}</div>
+        {{article.description}}
+      </div>
+  
+      <button class="save-news" routerLink="user"
+        
+        >
+        <i class="bi bi-box-arrow-down"></i>Save
+      </button>
+    </div>
+  
+  </div>
+  </body>
+
+  <!-- (click)="addNews({{article.title}}, {{article.description}}, {{article.url}}, {{article.urlToImage}})" -->

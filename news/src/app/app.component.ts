@@ -1,7 +1,7 @@
 import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { Article } from './article';
-import { ArticleService } from './article.service';
+import { Article } from './article.model';
+import { ArticleService } from './services/article.service';
 import { TokenStorageService } from './services/token-storage.service';
 
 

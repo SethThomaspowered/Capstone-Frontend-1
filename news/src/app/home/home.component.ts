@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { Article } from '../article';
+import { Article } from '../article.model';
 import { UserService } from '../services/user.service';
 import { NewsService } from '../services/news.service';
 import { TokenStorageService } from '../services/token-storage.service';
 import { HttpClient } from '@angular/common/http';
+import { SaveService } from '../services/save.service';
 
 @Component({
   selector: 'app-home',
@@ -15,12 +16,14 @@ export class HomeComponent implements OnInit {
   articles: Article[] | undefined;
   news: any;
   isLoggedIn = false;
+  article: any;
   // category: string = "";
 
   constructor(private userService: UserService, 
               private newsService: NewsService,
               private tokenStorageService: TokenStorageService,
-              private http: HttpClient) {
+              private http: HttpClient,
+              private saveService: SaveService) {
     this.newsService.getUSANews().subscribe(n => {
       this.news = n;
       console.log(this.news);
@@ -49,4 +52,9 @@ export class HomeComponent implements OnInit {
     this.isLoggedIn = !!this.tokenStorageService.getToken();    
   }
   
+  addNews(): void {
+    this.saveService.addToMyNews(this.article)
+      };
+      
+
 }
