@@ -22,12 +22,7 @@ export class HomeComponent implements OnInit {
   constructor(private userService: UserService,
     private newsService: NewsService,
     private tokenStorageService: TokenStorageService,
-    private http: HttpClient) {
-    this.newsService.getUSANews().subscribe(n => {
-      this.news = n;
-      console.log(this.news);
-    })
-  }
+    private http: HttpClient) { }
 
  
   ngOnInit(): void {
@@ -40,6 +35,11 @@ export class HomeComponent implements OnInit {
       }
     );
     this.isLoggedIn = !!this.tokenStorageService.getToken();
+    
+    this.newsService.getUSANews().subscribe(n => {
+      this.news = n;
+      console.log(this.news);
+    });
   }
 
   // addNews(): void {

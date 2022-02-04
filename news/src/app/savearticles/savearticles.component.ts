@@ -33,13 +33,6 @@ export class SaveArticlesComponent implements OnInit {
     this.isLoggedIn = !!this.tokenStorageService.getToken();
   }
 
-  addArticle(): void {
-    this.articleService.addArticle(this.article).subscribe(data => {
-      alert("Article saved")
-    });
-    
-  }
-
   addToMyNews(): void {
     this.articleService.addToMyNews(this.article).subscribe((data) => {
       this.article = data;

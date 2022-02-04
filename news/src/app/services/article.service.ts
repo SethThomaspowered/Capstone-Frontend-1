@@ -15,19 +15,16 @@ const httpOptions = {
 export class ArticleService {
     constructor(private http: HttpClient) {}
 
-    public getArticles(): Observable<any> {
-      return this.http.get<any>(`https://newsapi.org/v2/top-headlines?country=us&apiKey=1a8aac7473ea4b0196a149454361d807`);
+    getArticles(): Observable<any> {
+      return this.http.get<any>(SAVE_API + 'articles');
     }
 
-    public deleteArticle(article: any) {
+    deleteArticle(article: any) {
       return this.http.delete(SAVE_API + "/" + article.id);
     }
   
-    public addArticle(article: any) {
-      return this.http.post<Article>(SAVE_API, article);
-    }
-   
-    public addToMyNews(article: { title: any; description: any; url: any; urlToImage: any; }): Observable<any> {
+       
+    addToMyNews(article: { title: any; description: any; url: any; urlToImage: any; }): Observable<any> {
       
       return this.http.post(SAVE_API + "articles", {
         title: article.title,
