@@ -15,6 +15,8 @@ h1{
     flex: content;
     display: flex;
     font-size: 36px;
+    margin-left: 200px;
+    margin-top: 10px;
 }
 
 .article-container {
@@ -61,6 +63,8 @@ h1{
     max-width: 30px;
     max-height: 30px;
     margin-left: 5px;
+    border-color: gray;
+    border-width: 1px;
     
 }
 .url{
@@ -68,5 +72,7 @@ h1{
     max-width: 30px;
     max-height: 30px;
     margin-left: 5px;
+    border-color: gray;
+    border-width: 1px;
     
 }

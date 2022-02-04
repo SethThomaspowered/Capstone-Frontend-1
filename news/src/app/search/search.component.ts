@@ -15,7 +15,7 @@ export class SearchComponent implements OnInit {
 
   findNews(category: string) {
     this.http
-      .get(`https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=7a73d7a8b70b479095438788dc9cfe1f`)
+      .get(`https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=f0b6fb88a0754b51a4036904b433d5b4`)
       .subscribe((response) => {
         console.log(response);
         this.news = response;
