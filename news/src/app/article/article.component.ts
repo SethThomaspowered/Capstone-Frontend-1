@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
+import { Article } from '../article.model';
+import { ArticleService } from '../services/article.service';
 
 @Component({
   selector: 'app-article',
@@ -7,9 +11,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ArticleComponent implements OnInit {
 
-  constructor() { }
+  articles: any;
 
-  ngOnInit(): void {
+  constructor(private articleService: ArticleService) {
+
   }
+
+  ngOnInit() {
+    this.articleService.getArticles()
+      .subscribe( (data: Article[]) => {
+        this.articles = data;
+      });
+  };
+
+  deleteArticle(article: Article): void {
+    this.articleService.deleteArticle(article)
+      .subscribe( data => {
+        this.articles = this.articles.filter((a: Article) => a !== article);
+      })
+  };
 
 }

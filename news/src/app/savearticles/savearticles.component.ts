@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { NewsService } from '../services/news.service';
-import { SaveService } from '../services/save.service';
+// import { SaveService } from '../services/save.service';
 import { TokenStorageService } from '../services/token-storage.service';
 import { HttpClient } from '@angular/common/http';
-import { Article } from '../article/article.model';
+import { Article } from '../article.model';
 import { ArticleService } from '../services/article.service';
 
 @Component({
@@ -16,12 +16,13 @@ export class SaveArticlesComponent implements OnInit {
   form: any = {};
   errorMessage = '';
   article: Article = new Article();
-  // articles: Article[] | undefined;
+  articles: Article[] | undefined;
   news: any;
   isLoggedIn = false;
 
-  constructor(private saveService: SaveService, private newsService: NewsService,private tokenStorageService: TokenStorageService,
-    private http: HttpClient,) {
+
+  constructor(private newsService: NewsService,private tokenStorageService: TokenStorageService,
+    private http: HttpClient, private articleService: ArticleService) {
       this.newsService.getUSANews().subscribe(n => {
         this.news = n;
         console.log(this.news);
@@ -32,9 +33,20 @@ export class SaveArticlesComponent implements OnInit {
     this.isLoggedIn = !!this.tokenStorageService.getToken();
   }
 
-  addNews(): void {
-    this.saveService.savearticles(this.article);
+  addArticle(): void {
+    this.articleService.addArticle(this.article).subscribe(data => {
+      alert("Article saved")
+    });
     
   }
 
+  addToMyNews(): void {
+    this.articleService.addToMyNews(this.article).subscribe((data) => {
+      this.article = data;
+      alert("Article saved")
+      console.log(data);
+      
+    });
+    
+  }
 }
