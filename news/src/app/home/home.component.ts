@@ -4,7 +4,7 @@ import { UserService } from '../services/user.service';
 import { NewsService } from '../services/news.service';
 import { TokenStorageService } from '../services/token-storage.service';
 import { HttpClient } from '@angular/common/http';
-// import { SaveService } from '../services/save.service';
+
 
 @Component({
   selector: 'app-home',
@@ -17,7 +17,7 @@ export class HomeComponent implements OnInit {
   news: any;
   isLoggedIn = false;
   article: any;
-  // category: string = "";
+  
 
   constructor(private userService: UserService,
     private newsService: NewsService,

@@ -1,1 +1,11 @@
-<p>article works!</p>
+<h2 class="mynews">My Saved News</h2>
+<div class="newsfeed">
+    <div class="article-container" *ngFor="let article of articles">
+        <div class="title-image-container">
+            <div class="article-title">{{article.title}}</div>
+            <img class="image" src="{{article.urlToImage}}">
+        </div>
+        <div class="description-container">
+            <p>{{article.description}}</p>
+        </div>
+    </div>

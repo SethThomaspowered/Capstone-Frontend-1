@@ -1,8 +1,23 @@
-.image{
-    max-width: 50vw;
+.sidebar-nav{
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 30px;
+}
+.sidebar-nav ul li a {
+    font-size: 20px;
+    text-decoration: none;
+    display: block;
+    padding: 6px 10px;
+    transition: 0.5s;
 }
 
-.article-title{
-    max-width: 50vw;
-    font-size: small;
+.sidebar-nav .offcanvas {
+    width: 12vw;
+    border: none;
+}
+
+button{
+    background-color: transparent;
+    border: transparent;
+    color: royalblue;
 }

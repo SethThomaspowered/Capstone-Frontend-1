@@ -18,10 +18,10 @@ export class ArticleComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.articleService.getArticles()
-      .subscribe( (data: Article[]) => {
-        this.articles = data;
-      });
+    this.articleService.getArticles().subscribe(n => {
+      this.articles = n;
+      console.log(this.articles);
+    });
   };
 
   deleteArticle(article: Article): void {

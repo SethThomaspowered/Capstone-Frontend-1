@@ -1,40 +1,7 @@
 .home-container{
     max-width: 1200px;
 }
-.sidebar-nav{
-    display: inline-block;
-    vertical-align: top;
-    margin-top: 30px;
-}
-.sidebar-nav ul li a {
-    font-size: 20px;
-    text-decoration: none;
-    display: block;
-    padding: 6px 10px;
-    transition: 0.5s;
-}
-.sidebar-nav ul li a:hover {
-    background-color: #eeeeee;
-    border-radius: 4px;
-}
-.sidebar-nav .offcanvas {
-    width: 12vw;
-    border: none;
-}
-.sidebar-nav .offcanvas ul li a span {
-    font-size: 1.1vh;
-    position: relative;
-    top: -4px;
-    transition: 0.5s;
-}
-.sidebar-nav .offcanvas.show ul li a:hover span {
-    padding-left: 10px;
-}
 
-.bi::before, [class^="bi-"]::before, [class*=" bi-"]::before
-{
-    margin-right: 5px;    
-}
 
 .newsfeed{
     display: inline-block;
