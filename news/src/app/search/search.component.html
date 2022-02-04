@@ -1,4 +1,3 @@
-
 <div class="sidebar-nav">
     <div class="offcanvas offcanvas-start" tahlndex="-1" 
         id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
@@ -37,5 +36,18 @@
     </div>
 </div>
 
+<div class="newsfeed">
+<div class="article-container" *ngFor="let article of news.articles">
+    <div class="article-content-container">
 
+        <img class="image" src="{{article.urlToImage}}">
+    </div>
 
+    <div class="description-container">
+        <div class="article-title">{{article.title}}</div>
+        {{article.description}}
+    </div>
+    <button class="url" ><a href="{{article.url}}">
+        <i class="bi bi-link"></i></a>
+      </button>
+</div>
