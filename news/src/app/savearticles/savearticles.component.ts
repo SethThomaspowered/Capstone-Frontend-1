@@ -23,10 +23,7 @@ export class SaveArticlesComponent implements OnInit {
 
   constructor(private newsService: NewsService,private tokenStorageService: TokenStorageService,
     private http: HttpClient, private articleService: ArticleService) {
-      this.newsService.getUSANews().subscribe(n => {
-        this.news = n;
-        console.log(this.news);
-      })
+      
      }
 
   ngOnInit(): void {
