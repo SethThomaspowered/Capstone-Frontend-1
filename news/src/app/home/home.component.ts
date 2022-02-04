@@ -41,10 +41,5 @@ export class HomeComponent implements OnInit {
       console.log(this.news);
     });
   }
-
-  // addNews(): void {
-  //   this.saveService.addToMyNews(this.article)
-  // };
-
-
+  
 }
