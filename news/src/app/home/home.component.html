@@ -1,10 +1,11 @@
+<h1>Latest News</h1>
 <body class="home-container">
   <div class="search-app">
     <app-search></app-search>
   </div>
 
   <div class="newsfeed">
-    <h2>Latest News</h2>
+    
     <div class="article-container" *ngFor="let article of news.articles">
 
       <div class="article-content-container">
@@ -19,8 +20,13 @@
 
       <button class="save-news" *ngIf="isLoggedIn" routerLink="user"
         >
-        <i class="bi bi-box-arrow-down"></i>Save
+        <i class="bi bi-box-arrow-down"></i>
       </button>
+
+      <button class="url" *ngIf="isLoggedIn" routerLink="user"><a href="{{article.url}}">
+        <i class="bi bi-link"></i></a>
+      </button>
+
     </div>
 
   </div>

@@ -3,21 +3,16 @@
     vertical-align: top;
     margin-top: 30px;
 }
-.sidebar-nav ul li a {
-    font-size: 20px;
-    text-decoration: none;
-    display: block;
-    padding: 6px 10px;
-    transition: 0.5s;
-}
 
-.sidebar-nav .offcanvas {
-    width: 12vw;
-    border: none;
+.bi::before, [class^="bi-"]::before, [class*=" bi-"]::before
+{
+    margin-right: 10px;    
 }
 
 button{
     background-color: transparent;
     border: transparent;
     color: royalblue;
+    width: 150px;
+    text-align: left;
 }

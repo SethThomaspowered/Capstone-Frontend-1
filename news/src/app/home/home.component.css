@@ -1,7 +1,7 @@
 .home-container{
     max-width: 1200px;
+    
 }
-
 
 .newsfeed{
     display: inline-block;
@@ -11,16 +11,16 @@
     margin-top: 30px;
 }
 
-h2{
+h1{
     flex: content;
     display: flex;
-    font-size: 3vh;
+    font-size: 36px;
 }
 
 .article-container {
     display: flex;
     margin: auto;
-    max-width: 75%;
+    width: 900px;
     margin-bottom: 15px;
     border: lightgray;
     border-width: 1px;
@@ -32,23 +32,41 @@ h2{
 }
 
 .article-title {
+    width: 280px;
     margin-bottom: 5px;
-    font-size: 1.3vh;
+    font-size: 16px;
     font-weight: 600;
+    
 }
 
 .image{
-    max-width: 30vw;
+    max-width: 500px;
     border-radius: 6px;
     padding-bottom: 5px;
 }
 
 .description-container{
-    font-size: 1.2vh;
-    max-width: 100%;
+    font-size: 12px;
+    width: 400px;
     margin-left: 20px;
 }
 
 .search-app{
     display: inline-block;
+}
+
+.save-news{
+    background-color:transparent;
+    color: royalblue;
+    max-width: 30px;
+    max-height: 30px;
+    margin-left: 5px;
+    
+}
+.url{
+    background-color: transparent;
+    max-width: 30px;
+    max-height: 30px;
+    margin-left: 5px;
+    
 }
